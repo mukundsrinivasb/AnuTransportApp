@@ -20,8 +20,14 @@ public class SignInActivity extends AppCompatActivity {
         emailId = findViewById(R.id.email);
         password = findViewById(R.id.password);
         try{
+            if(emailId.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
+                throw new EmptyFieldException("Either User name or password is empty");
+            }
             //Login here
+        }catch(EmptyFieldException e){
+            Toast.makeText(this,e.getMessage(),Toast.LENGTH_LONG).show();
         }
+
     }
 
 }
