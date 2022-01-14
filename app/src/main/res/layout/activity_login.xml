@@ -18,11 +18,13 @@
         android:textColorHint="@color/white"
         android:textAlignment="center"
         android:hint="password"
+        android:drawableLeft="@drawable/ic_lock"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+         />
 
     <EditText
         android:id="@+id/emailId"
@@ -35,6 +37,7 @@
         android:textColorHint="@color/white"
         android:textAlignment="center"
         android:hint="email"
+        android:drawableLeft="@drawable/ic_user"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
