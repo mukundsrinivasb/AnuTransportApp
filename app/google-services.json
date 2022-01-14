@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013551556035",
+    "project_id": "anubustransit",
+    "storage_bucket": "anubustransit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013551556035:android:d3ad9dc96c91df225f4976",
+        "android_client_info": {
+          "package_name": "com.example.anubusroutes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013551556035-2aa81crvenu1np7ggtgf2iept0bgr7fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChYtE2AG0hVMro0rFGGEzYp5BceTU9_Lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013551556035-2aa81crvenu1np7ggtgf2iept0bgr7fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
