@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
 
-    public EditText emailId = findViewById(R.id.email);
+    public EditText emailId = findViewById(R.id.emailId);
     public EditText password = findViewById(R.id.password);
     public FirebaseAuth mAuth;
     private  String TAG = "SignInAct";
@@ -36,30 +36,9 @@ public class SignInActivity extends AppCompatActivity {
             Log.i(TAG, "user: "+currentUser.getEmail());
         }
         else{
-            try{
-                String emailText = emailId.getText().toString();
-                String passText = password.getText().toString();
-                mAuth.signInWithEmailAndPassword(emailText,passText).addOnCompleteListener(
-                        this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull  Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    Log.d(TAG, "Successful SignIn");
-                                }
-                                else{
-                                    Log.d(TAG,"Not Successful SignIn");
-                                    Toast.makeText(SignInActivity.this, "", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        }
-                );
-                if(emailText.isEmpty() || passText.isEmpty()){
-                    throw new EmptyFieldException("Either User name or password is empty");
-                }
-            }catch(EmptyFieldException e){
-                Toast.makeText(this,e.getMessage(),Toast.LENGTH_LONG).show();
-            }
+
         }
+
 
     }
 }
