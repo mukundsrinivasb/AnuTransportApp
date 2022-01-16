@@ -2,4 +2,5 @@
 <resources>
     <color name="ANU_yellow">#FFBD59</color>
     <color name="Orange">#FF984D</color>
+    <color name="white"> #FFFFFF</color>
 </resources>
