@@ -23,6 +23,7 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_ANUBusRoutes);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         Log.w(TAG, "onCreate: words");
