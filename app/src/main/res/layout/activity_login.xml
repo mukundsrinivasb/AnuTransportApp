@@ -11,29 +11,12 @@
         android:id="@+id/emailId"
         android:layout_width="159dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginBottom="368dp"
         android:background="@drawable/rounded_textedit"
         android:ems="10"
         android:fontFamily="@font/quicksand_regular"
         android:gravity="center_horizontal"
         android:hint="email"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColorHint="@color/Orange"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="159dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="412dp"
-        android:background="@drawable/rounded_textedit"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_regular"
-        android:gravity="center_horizontal"
-        android:hint="password"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColorHint="@color/Orange"
@@ -54,5 +37,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailId"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="159dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="320dp"
+        android:background="@drawable/rounded_textedit"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center_horizontal"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/Orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
