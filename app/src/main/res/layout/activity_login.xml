@@ -16,13 +16,14 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_regular"
         android:gravity="center_horizontal"
-        android:hint="email"
-        android:inputType="textPassword"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColorHint="@color/Orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="@string/email_hint"/>
 
     <View
         android:id="@+id/view"
@@ -36,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailId"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        />
 
     <EditText
         android:id="@+id/password"
@@ -47,28 +49,29 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_regular"
         android:gravity="center_horizontal"
-        android:hint="password"
+        android:hint="@string/password_hint"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColorHint="@color/Orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="@string/password_hint"/>
 
-    <Button
-        android:id="@+id/button"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="161dp"
         android:layout_marginRight="161dp"
-        android:background="@color/white"
+        android:background="@drawable/rounded_loginbutton"
         android:fontFamily="@font/quicksand_regular"
-        android:text="Login"
+        android:text="@string/login_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
