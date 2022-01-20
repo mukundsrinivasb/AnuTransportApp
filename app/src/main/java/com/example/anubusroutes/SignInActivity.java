@@ -45,6 +45,7 @@ public class SignInActivity extends AppCompatActivity {
                                 currentUser = mAuth.getCurrentUser();
                                 try {
                                     Log.i(TAG, currentUser.getEmail());
+                                    Toast.makeText(getBaseContext(),currentUser.getEmail(),Toast.LENGTH_LONG).show();
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
