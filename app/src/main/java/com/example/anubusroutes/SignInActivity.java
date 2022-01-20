@@ -1,15 +1,13 @@
 package com.example.anubusroutes;
-
-
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SignInActivity extends AppCompatActivity {
@@ -17,6 +15,9 @@ public class SignInActivity extends AppCompatActivity {
     protected EditText email;
     protected EditText password;
     public Button loginButton;
+    public FirebaseUser currentUser;
+    protected FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,26 +25,35 @@ public class SignInActivity extends AppCompatActivity {
         email = findViewById(R.id.emailId);
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginbutton);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        loginButton.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-               if(email.getText().toString().isEmpty() || email.getText().toString().isEmpty())
-                   try {
-                       throw new EmptyFieldException("login / password cannot be blank");
-                   } catch (EmptyFieldException e) {
-                       e.printStackTrace();
-                   }
-                   Log.i(TAG,email.getText().toString());
-               }
 
-            }
-
+        loginButton.setOnClickListener(
+                view -> {
+                    String emailString = email.getText().toString();
+                    String passwordString = password.getText().toString();
+                    currentUser = mAuth.getCurrentUser();
+                    if (currentUser != null) {
+                        Toast.makeText(getBaseContext(), currentUser.getEmail() + "is already logged in", Toast.LENGTH_LONG).show();
+                    } else {
+                        mAuth.signInWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(SignInActivity.this, task -> {
+                            if (task.isSuccessful()) {
+                                currentUser = mAuth.getCurrentUser();
+                                try {
+                                    Log.i(TAG, currentUser.getEmail());
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                    }
+                }
         );
-
     }
+
+
 }
