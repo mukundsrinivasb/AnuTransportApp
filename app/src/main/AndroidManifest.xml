@@ -15,9 +15,6 @@
         android:theme="@style/SplashScreen">
         <activity android:name=".MapActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
-            </intent-filter>
         </activity>
         <activity
             android:name=".SignInActivity"

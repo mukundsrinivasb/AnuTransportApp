@@ -41,6 +41,9 @@ public class SignInActivity extends AppCompatActivity {
                     currentUser = mAuth.getCurrentUser();
                     if (currentUser != null) {
                         Toast.makeText(getBaseContext(), currentUser.getEmail() + "is already logged in", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getBaseContext(),MapActivity.class);
+                        intent.putExtra("USERNAME",currentUser.getDisplayName());
+                        startActivity(intent);
                     } else {
                         mAuth.signInWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(SignInActivity.this, task -> {
                             if (task.isSuccessful()) {
@@ -49,6 +52,7 @@ public class SignInActivity extends AppCompatActivity {
                                     Log.i(TAG, currentUser.getEmail());
                                     Toast.makeText(getBaseContext(),currentUser.getEmail(),Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(getBaseContext(),MapActivity.class);
+                                    intent.putExtra("USERNAME",currentUser.getEmail());
                                     startActivity(intent);
                                 } catch (Exception e) {
                                     e.printStackTrace();
