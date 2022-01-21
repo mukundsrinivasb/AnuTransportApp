@@ -1,6 +1,8 @@
 package com.example.anubusroutes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -46,6 +48,8 @@ public class SignInActivity extends AppCompatActivity {
                                 try {
                                     Log.i(TAG, currentUser.getEmail());
                                     Toast.makeText(getBaseContext(),currentUser.getEmail(),Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(getBaseContext(),MapActivity.class);
+                                    startActivity(intent);
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }
