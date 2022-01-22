@@ -14,10 +14,12 @@
         android:orientation="vertical">
         <!-- Here goes the map Layout-->
         <org.osmdroid.views.MapView
+            android:id="@+id/MapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <!-- Here goes the Text Layout-->
         <TextView
+            android:id="@+id/TextViewMap"
             android:layout_width="342dp"
             android:layout_height="50dp"
             android:layout_margin="50dp"

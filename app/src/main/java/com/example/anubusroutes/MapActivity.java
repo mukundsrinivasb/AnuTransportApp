@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import org.osmdroid.views.MapView;
+
 public class MapActivity extends AppCompatActivity {
 
     String username;
@@ -20,7 +22,6 @@ public class MapActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        TextView tView = findViewById(R.id.TextViewVerbose);
-        tView.setText(username);
+        MapView tMap = findViewById(R.id.)
     }
 }
