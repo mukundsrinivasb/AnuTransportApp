@@ -7,33 +7,28 @@
     android:background="#FFFFFF"
     tools:context=".SignInActivity">
 
-    <TextView
-        android:id="@+id/MapScreenTextView"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/quicksand_regular"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:text="@string/MapViewText"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <org.osmdroid.views.MapView
-        android:layout_width="350dp"
-        android:layout_height="400dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MapScreenTextView" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- Here goes the map Layout-->
+        <!-- Here goes the Text Layout-->
 
+        <org.osmdroid.views.MapView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_margin="50dp"
+            android:translationX="-20dp"
+            android:translationY="-45dp"
+            android:textColor="@color/ANU_yellow"
+            android:text="@string/MapViewText"
+            android:gravity="center"
+            android:textSize="30sp"/>
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
