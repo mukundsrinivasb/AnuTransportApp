@@ -13,12 +13,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <!-- Here goes the map Layout-->
-        <!-- Here goes the Text Layout-->
-
         <org.osmdroid.views.MapView
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
+        <!-- Here goes the Text Layout-->
         <TextView
             android:layout_width="342dp"
             android:layout_height="50dp"
@@ -29,6 +27,5 @@
             android:text="@string/MapViewText"
             android:gravity="center"
             android:textSize="30sp"/>
-
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
